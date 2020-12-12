@@ -11,7 +11,7 @@ export class PupilEditComponent implements OnInit {
 
   @Input() pupil: Pupil;
 
-  @Output() pupilChange = new EventEmitter<Pupil>();
+  @Output() pupilChange = new EventEmitter<Pupil["firstName"]>();
 
   constructor() {}
 
@@ -20,6 +20,6 @@ export class PupilEditComponent implements OnInit {
   }
 
   OnPupilChanged() {
-    this.pupilChange.emit(this.pupil);    
+    this.pupilChange.emit(this.pupil.firstName); 
   }
 }

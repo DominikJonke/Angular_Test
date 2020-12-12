@@ -9,5 +9,6 @@ export class AppComponent {
   title = 'reusable-demo';
 
   name: string;
-  firstName: string;
+
+  fName: string;
 }
